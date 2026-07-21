@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RK Bhai</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:8px;
+background:
+linear-gradient(rgba(5,10,25,.92),rgba(5,10,25,.95)),
+url("https://images.unsplash.com/photo-1540747913346-19e32dc3e97e");
+background-size:cover;
+background-position:center;
+overflow-x:hidden;
+}
+
+/* Card */
+
+.card{
+width:92%;
+max-width:330px;
+background:linear-gradient(180deg,#1a1f33,#101522);
+border-radius:24px;
+overflow:hidden;
+border:1px solid rgba(255,255,255,.12);
+box-shadow:
+0 18px 50px rgba(0,0,0,.6),
+0 0 20px rgba(255,215,0,.12),
+inset 0 1px 1px rgba(255,255,255,.08);
+backdrop-filter:blur(25px);
+
+animation:fade .8s ease,float 5s ease-in-out infinite;
+}
+
+/* Header */
+
+.top-strip{
+height:95px;
+background:#161b2f;
+}
+
+.content{
+padding:16px;
+text-align:center;
+color:#fff;
+}
+
+/* Profile */
+
+.profile{
+width:82px;
+height:82px;
+border-radius:50%;
+object-fit:cover;
+border:4px solid #fff;
+background:#fff;
+margin-top:-48px;
+box-shadow:0 10px 25px rgba(0,0,0,.4);
+animation:pulse 2.5s infinite;
+}
+
+/* Badge */
+
+.verify{
+display:inline-block;
+margin-top:15px;
+padding:5px 16px;
+background:linear-gradient(90deg,#FFD700,#F4C430);
+color:#111;
+font-size:11px;
+font-weight:700;
+border-radius:30px;
+animation:glow 2s infinite alternate;
+}
+
+h1{
+margin-top:14px;
+font-size:22px;
+font-weight:800;
+line-height:1.3;
+}
+
+.description{
+margin-top:14px;
+font-size:13px;
+line-height:1.6;
+color:#ddd;
+}
+
+/* Feature */
+
+.feature{
+margin-top:12px;
+padding:12px;
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,215,0,.15);
+border-radius:14px;
+font-size:13px;
+font-weight:600;
+transition:.3s;
+}
+
+.feature:hover{
+transform:translateY(-4px) scale(1.02);
+background:rgba(255,215,0,.08);
+}
+
+/* Button */
+
+.join-btn{
+display:block;
+position:relative;
+overflow:hidden;
+margin-top:18px;
+padding:14px;
+text-decoration:none;
+background:linear-gradient(90deg,#FFD700,#FFC107);
+color:#111;
+font-size:17px;
+font-weight:800;
+border-radius:14px;
+box-shadow:0 12px 25px rgba(255,215,0,.35);
+transition:.3s;
+}
+
+.join-btn::before{
+content:"";
+position:absolute;
+top:0;
+left:-120%;
+width:60%;
+height:100%;
+background:rgba(255,255,255,.35);
+transform:skewX(-25deg);
+transition:.8s;
+}
+
+.join-btn:hover::before{
+left:140%;
+}
+
+.join-btn:hover{
+transform:translateY(-3px);
+}
+
+.footer{
+margin-top:15px;
+font-size:11px;
+color:#bbb;
+}
+
+/* Mobile */
+
+@media(max-width:480px){
+
+.card{
+width:90%;
+max-width:310px;
+}
+
+.top-strip{
+height:85px;
+}
+
+.profile{
+width:78px;
+height:78px;
+margin-top:-45px;
+}
+
+h1{
+font-size:20px;
+}
+
+.description{
+font-size:12px;
+}
+
+.feature{
+font-size:12px;
+padding:10px;
+}
+
+.join-btn{
+font-size:15px;
+padding:12px;
+}
+
+}
+
+@media(max-width:360px){
+
+.card{
+max-width:300px;
+}
+
+.profile{
+width:70px;
+height:70px;
+margin-top:-40px;
+}
+
+h1{
+font-size:18px;
+}
+
+.verify{
+font-size:10px;
+padding:6px 16px;
+}
+
+.description{
+font-size:11px;
+}
+
+.feature{
+font-size:11px;
+padding:9px;
+}
+
+.join-btn{
+font-size:14px;
+padding:11px;
+}
+
+}
+
+/* Animations */
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(30px) scale(.95);
+}
+to{
+opacity:1;
+transform:translateY(0) scale(1);
+}
+}
+
+@keyframes float{
+0%,100%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-6px);
+}
+}
+
+@keyframes pulse{
+0%,100%{
+transform:scale(1);
+}
+50%{
+transform:scale(1.05);
+}
+}
+
+@keyframes glow{
+from{
+box-shadow:0 0 8px rgba(255,215,0,.3);
+}
+to{
+box-shadow:0 0 22px rgba(255,215,0,.7);
+}
+}
+</style>
+
+</head>
+<body>
+
+<div class="card">
+
+<div class="top-strip"></div>
+
+<div class="content">
+
+<img src="RK.jpg" class="profile" alt="Profile">
+
+<div class="verify">
+🏏 VERIFIED CRICKET ANALYST
+</div>
+
+<h1>MATCH EXPERT</h1>
+
+<div class="description">
+Get accurate cricket match insights,<br>
+Toss reports & premium winning analysis.
+</div>
+
+<div class="feature">
+✅ Toss & Match Winner Prediction
+</div>
+
+<div class="feature">
+✅ Premium Fast Updates
+</div>
+
+<div class="feature">
+✅ Trusted Cricket Analysis
+</div>
+
+<a href="https://t.me/+BoowAYVftEdhZmM1" class="join-btn">
+🚀 JOIN TELEGRAM NOW
+</a>
+
+<div class="footer">
+Limited Access • Join Before Match Starts
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
